@@ -1,0 +1,244 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: "Spartan", sans-serif;
+}
+
+body {
+  background: #3a4764;
+  font-size: 100%;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+main {
+  margin: 0 auto;
+  max-width: 30em;
+  padding: 2em;
+}
+
+main .calc-display {
+  background: #182034;
+  width: 100%;
+  min-height: 8em;
+  border-radius: 1em;
+  margin-bottom: 1em;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  color: white;
+  -webkit-user-select: auto;
+     -moz-user-select: auto;
+      -ms-user-select: auto;
+          user-select: auto;
+  padding: 1.5em 0;
+}
+
+main .calc-display .prev-display {
+  text-align: end;
+  margin: 0 1em 1.25em 0;
+  opacity: 0.75;
+  font-size: 1.5em;
+}
+
+main .calc-display .curr-display {
+  text-align: end;
+  margin: 0 0.75em -0.2em 0;
+  font-size: 2.15em;
+}
+
+main .keypad {
+  background: #232c43;
+  padding: 1.75em;
+  border-radius: 1em;
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+  -webkit-column-gap: 1.25em;
+          column-gap: 1.25em;
+  row-gap: 1.2em;
+      grid-template-areas: "seven eight nine delete" "four five six add" "one two three subtract" "decimal zero divide multiply" "reset reset equals equals";
+}
+
+main .keypad .keypad__btn {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  width: 100%;
+  font-size: 1.5em;
+  padding: 0.65em 1em;
+  border: none;
+  border-radius: 0.35em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background: #eae3dc;
+  color: #35352c;
+  -webkit-box-shadow: 0 5px 0 0 #b4a597;
+          box-shadow: 0 5px 0 0 #b4a597;
+  cursor: pointer;
+}
+
+main .keypad .keypad__btn:active {
+  -webkit-transform: scale(0.95);
+          transform: scale(0.95);
+}
+
+main .keypad .num1 {
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+  grid-area: one;
+}
+
+main .keypad .num2 {
+  -ms-grid-row: 3;
+  -ms-grid-column: 2;
+  grid-area: two;
+}
+
+main .keypad .num3 {
+  -ms-grid-row: 3;
+  -ms-grid-column: 3;
+  grid-area: three;
+}
+
+main .keypad .num4 {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: four;
+}
+
+main .keypad .num5 {
+  -ms-grid-row: 2;
+  -ms-grid-column: 2;
+  grid-area: five;
+}
+
+main .keypad .num6 {
+  -ms-grid-row: 2;
+  -ms-grid-column: 3;
+  grid-area: six;
+}
+
+main .keypad .num7 {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: seven;
+}
+
+main .keypad .num8 {
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
+  grid-area: eight;
+}
+
+main .keypad .num9 {
+  -ms-grid-row: 1;
+  -ms-grid-column: 3;
+  grid-area: nine;
+}
+
+main .keypad .num0 {
+  -ms-grid-row: 4;
+  -ms-grid-column: 2;
+  grid-area: zero;
+}
+
+main .keypad .add {
+  -ms-grid-row: 2;
+  -ms-grid-column: 4;
+  grid-area: add;
+}
+
+main .keypad .subtract {
+  -ms-grid-row: 3;
+  -ms-grid-column: 4;
+  grid-area: subtract;
+}
+
+main .keypad .multiply {
+  -ms-grid-row: 4;
+  -ms-grid-column: 4;
+  grid-area: multiply;
+}
+
+main .keypad .divide {
+  -ms-grid-row: 4;
+  -ms-grid-column: 3;
+  grid-area: divide;
+}
+
+main .keypad .decimal {
+  -ms-grid-row: 4;
+  -ms-grid-column: 1;
+  grid-area: decimal;
+}
+
+main .keypad .delete {
+  -ms-grid-row: 1;
+  -ms-grid-column: 4;
+  grid-area: delete;
+  background: #637097;
+  -webkit-box-shadow: 0 5px 0 0 #404e72;
+          box-shadow: 0 5px 0 0 #404e72;
+  color: white;
+  width: 100%;
+  height: 100%;
+  font-size: 1.25em;
+  padding: 0.85em 0;
+}
+
+main .keypad .reset {
+  -ms-grid-row: 5;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-area: reset;
+  background: #637097;
+  -webkit-box-shadow: 0 5px 0 0 #404e72;
+          box-shadow: 0 5px 0 0 #404e72;
+  color: white;
+  width: 100%;
+  height: 100%;
+  font-size: 1.25em;
+}
+
+main .keypad .equals {
+  -ms-grid-row: 5;
+  -ms-grid-column: 3;
+  -ms-grid-column-span: 2;
+  grid-area: equals;
+  background: #d03f2f;
+  -webkit-box-shadow: 0 5px 0 0 #93261a;
+          box-shadow: 0 5px 0 0 #93261a;
+  color: white;
+  width: 100%;
+  height: 100%;
+  padding: 0.85em 0;
+  font-size: 1.25em;
+}
+
+.attribution {
+  text-align: center;
+  color: #fafafa;
+  padding: 1em;
+  margin: 0 6em;
+  border-radius: 0.4em;
+  border: 2px solid #fafafa;
+}
+
+.attribution a {
+  color: #f8f8f8;
+}
+/*# sourceMappingURL=index.css.map */

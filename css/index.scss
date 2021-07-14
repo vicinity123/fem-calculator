@@ -1,0 +1,170 @@
+@import "variables";
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Spartan", sans-serif;
+}
+
+body {
+  background: $main-bkgd-blue;
+  font-size: 100%;
+  user-select: none;
+}
+
+main {
+  margin: 0 auto;
+  max-width: 30em;
+  padding: 2em;
+
+  .calc-display {
+    background: $scrn-bkgd-blue;
+    width: 100%;
+    min-height: 8em;
+    border-radius: 1em;
+    margin-bottom: 1em;
+    box-sizing: border-box;
+    color: $txt-white;
+    user-select: auto;
+    padding: 1.5em 0;
+
+    .prev-display {
+      text-align: end;
+      margin: 0 1em 1.25em 0;
+      opacity: 0.75;
+      font-size: 1.5em;
+    }
+    .curr-display {
+      text-align: end;
+      margin: 0 0.75em -0.2em 0;
+      font-size: 2.15em;
+    }
+  }
+
+  .keypad {
+    background: $kpad-tgle-bkgd-blue;
+    padding: 1.75em;
+    border-radius: 1em;
+    display: grid;
+    place-items: center;
+    column-gap: 1.25em;
+    row-gap: 1.2em;
+    grid-template-areas:
+      "seven eight nine delete"
+      "four five six add"
+      "one two three subtract"
+      "decimal zero divide multiply"
+      "reset reset equals equals";
+
+    .keypad__btn {
+      user-select: none;
+      width: 100%;
+      font-size: 1.5em;
+      padding: 0.65em 1em;
+      border: none;
+      border-radius: 0.35em;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: $key-bkgd-org;
+      color: $dk-gray-yellow;
+      box-shadow: 0 5px 0 0 $key-shdw-org;
+      cursor: pointer;
+
+      &:active {
+        transform: scale(0.95);
+      }
+    }
+
+    .num1 {
+      grid-area: one;
+    }
+    .num2 {
+      grid-area: two;
+    }
+    .num3 {
+      grid-area: three;
+    }
+    .num4 {
+      grid-area: four;
+    }
+    .num5 {
+      grid-area: five;
+    }
+    .num6 {
+      grid-area: six;
+    }
+    .num7 {
+      grid-area: seven;
+    }
+    .num8 {
+      grid-area: eight;
+    }
+    .num9 {
+      grid-area: nine;
+    }
+    .num0 {
+      grid-area: zero;
+    }
+    .add {
+      grid-area: add;
+    }
+    .subtract {
+      grid-area: subtract;
+    }
+    .multiply {
+      grid-area: multiply;
+    }
+    .divide {
+      grid-area: divide;
+    }
+    .decimal {
+      grid-area: decimal;
+    }
+    .delete {
+      grid-area: delete;
+      background: $key-bkgd-blue;
+      box-shadow: 0 5px 0 0 $key-shdw-blue;
+      color: $txt-white;
+      width: 100%;
+      height: 100%;
+      font-size: 1.25em;
+      padding: 0.85em 0;
+    }
+    .reset {
+      grid-area: reset;
+      background: $key-bkgd-blue;
+      box-shadow: 0 5px 0 0 $key-shdw-blue;
+      color: $txt-white;
+      width: 100%;
+      height: 100%;
+      font-size: 1.25em;
+    }
+    .equals {
+      grid-area: equals;
+      background: $key-tgle-bkgd-red;
+      box-shadow: 0 5px 0 0 $key-shdw-red;
+      color: $txt-white;
+      width: 100%;
+      height: 100%;
+      padding: 0.85em 0;
+      font-size: 1.25em;
+    }
+  }
+}
+
+.attribution {
+  text-align: center;
+  color: #fafafa;
+  padding: 1em;
+  margin: 0 6em;
+  border-radius: 0.4em;
+  border: 2px solid #fafafa;
+
+  a {
+    color: #f8f8f8;
+  }
+}
